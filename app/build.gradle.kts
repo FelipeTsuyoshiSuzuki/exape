@@ -77,4 +77,8 @@ dependencies {
     // RETROFIT
     implementation(libs.retrofit)
 
+    // COIL
+    implementation(libs.coil.compose)
+
+
 }
