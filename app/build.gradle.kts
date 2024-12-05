@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.exape"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.exape"
@@ -42,7 +42,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packaging {
         resources {
@@ -73,12 +73,24 @@ dependencies {
 
     // DAGGER
     implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // RETROFIT
     implementation(libs.retrofit)
 
     // COIL
     implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+
+
+    // GSON
+    implementation (libs.gson)
+    implementation (libs.converter.gson)
+    implementation(platform(libs.okhttp.bom))
+
+    // COROUTINES
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 
 
 }
